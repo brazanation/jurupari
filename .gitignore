@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+*.env.local
+.clj-kondo/
+.lsp/
+.DS_Store
