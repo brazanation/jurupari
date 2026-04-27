@@ -34,7 +34,7 @@ pnpm --filter @jurupari/mcp build && node packages/mcp/dist/index.js  # MCP serv
   "mcpServers": {
     "jurupari": {
       "type": "sse",
-      "url": "https://your-railway-app.railway.app/mcp/sse?token=your-secret-token"
+      "url": "https://your-url/mcp/sse?token=your-secret-token"
     }
   }
 }
@@ -82,7 +82,7 @@ PATCH  /memories/:id      Authorization: Bearer <token>
 DELETE /memories/:id      Authorization: Bearer <token>
 ```
 
-## Deploy to Railway
+## Deploy to Railway as an example
 
 1. Push repo to GitHub
 2. New Railway project → connect repo
