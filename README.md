@@ -5,9 +5,9 @@ Personal knowledge base or second brain with semantic search. PostgreSQL + pgvec
 Why? We are done with markdown, they are nice, until you have millions of them.
 
 ## The name
+<img src="/docs/jurupari-small.png" alt="jurupari-logo" width="100">
 Jurupari is an indigenous Amazonian legislator and spirit who established social laws, rituals, and sacred traditions for tribes.
 
-![jurupari-logo](/docs/jurupari-logo.png)
 
 ## Workflwo
 The workflow is simple, you deploy it in the place is better for you, like AWS, Railway... and plug the MCP to your Claude, GPT, Claude Code, OpenClaw, Hermes...
