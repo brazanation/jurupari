@@ -1,0 +1,26 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [pgvector(map: "vector"), uuid_ossp(map: "uuid-ossp")]
+}
+
+model Memory {
+  id          String                      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  category    String
+  title       String
+  content     String
+  metadata    Json                        @default("{}")
+  accessLevel Int                         @default(0) @map("access_level")
+  embedding   Unsupported("vector(1536)")?
+  createdAt   DateTime                    @default(now()) @map("created_at")
+  updatedAt   DateTime                    @updatedAt @map("updated_at")
+
+  @@index([category])
+  @@index([accessLevel], map: "idx_memories_access_level")
+  @@map("memories")
+}
